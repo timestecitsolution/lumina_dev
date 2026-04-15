@@ -145,10 +145,14 @@
         </div>
 
         <div class="d-flex" id="table-actions">
-            <x-forms.link-primary link="javascript:;" class="mr-3 float-left mb-2 mb-lg-0 mb-md-0 add-request"
-            icon="plus">
-                @lang('payroll::modules.payroll.addRequest')
-            </x-forms.link-primary>
+
+            @if(!is_null($userPolicy))
+
+                <x-forms.link-primary link="javascript:;" class="mr-3 float-left mb-2 mb-lg-0 mb-md-0 add-request"
+                icon="plus">
+                    @lang('payroll::modules.payroll.addRequest')
+                </x-forms.link-primary>
+            @endif
         </div>
         <!-- Add Task Export Buttons End -->
         <!-- Task Box Start -->
