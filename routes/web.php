@@ -138,6 +138,7 @@ use App\Http\Controllers\StepController;
 use App\Http\Controllers\DeedController;
 
 Route::group(['middleware' => 'auth', 'prefix' => 'account'], function () {
+    
 
     Route::prefix('loans')->group(function () {
         Route::get('/', [EmployeeLoanController::class,'index'])->name('loan.index');
