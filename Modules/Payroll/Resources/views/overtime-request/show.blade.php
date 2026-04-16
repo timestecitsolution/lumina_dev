@@ -90,7 +90,7 @@
                 @if($overtimeRequest->status == 'approved')
                     <span class="badge bg-success"><h4>Overtime Request is Approved</h4></span>
                 @elseif($overtimeRequest->status == 'rejected')
-                    <span class="badge bg-danger"><h4>Overtime Request is Rejected Please Edit</h4></span>
+                    <span class="badge bg-danger"><h4>Overtime Request is Rejected</h4></span>
                 @elseif($isSuperAdmin || ($nextApproval && $nextApproval->employee_id == $user->id))
                     <form action="{{ route('overtime-requests.action', $overtimeRequest->id) }}" method="POST">
                         @csrf
