@@ -373,7 +373,6 @@ class OvertimeRequestController extends AccountBaseController
                     return !OvertimeRequestApprovals::where('overtime_request_id', $overtime->id)
                         ->where('employee_id', $perm->employee_id)->exists();
                 });
-// dd($overtime);
                 if($remaining->isEmpty()){
                     $overtime->update(['status'=>'approved']);
                 }
