@@ -118,7 +118,8 @@ class ZKTecoController extends Controller
             "ResLogDay=18250\r\n" .
             "ResLogDelCount=10000\r\n" .
             "ResLogCount=50000\r\n" .
-            "TransTimes=00:00;14:05\r\n" .
+            // "TransTimes=00:00;14:05\r\n" .
+            "TransTimes=00:00;16:25\r\n" .
             "TransInterval=1\r\n" .
             "TransFlag=1111000000\r\n" .
             "TimeZone=" . $timezoneToMinutes . "\r\n" .
