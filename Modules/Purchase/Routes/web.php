@@ -132,6 +132,7 @@ Route::group(['middleware' => 'auth', 'prefix' => 'account'], function () {
 
     /* Reports */
     Route::resource('reports', ReportsController::class);
-    // Route::resource('order-report', PurchaseOrderReportController::class);
+    // Route::resource('order-report', PurchaseOrderReportController::class); .
+
 
 });
