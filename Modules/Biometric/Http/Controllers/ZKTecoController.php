@@ -41,6 +41,13 @@ class ZKTecoController extends Controller
             'last_online' => now()
         ]);
 
+        Log::info('Full Request Debug:', [
+            'content' => $request->getContent(),
+            'all' => $request->all(),
+            'content_type' => $request->header('Content-Type'),
+            'query_string' => $request->getQueryString(),
+        ]);
+
         $rawContent = $request->getContent();
         // Split raw input by newlines in case of multiple logs
         $rows = preg_split('/\\r\\n|\\r|\\n/', $rawContent);
