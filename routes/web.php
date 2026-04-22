@@ -169,8 +169,8 @@ Route::group(['middleware' => 'auth', 'prefix' => 'account'], function () {
     Route::resource('contractors', ContractorController::class);
 
 
-    Route::post('/ai/contractor-type-description', [AiController::class, 'contractorTypeDesc'])
-    ->name('ai.contractorTypeDesc');
+    // Route::post('/ai/contractor-type-description', [AiController::class, 'contractorTypeDesc'])
+    // ->name('ai.contractorTypeDesc');
 
     Route::post('sections/{id}/toggle-status', 
         [SectionController::class, 'toggleStatus']

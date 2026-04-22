@@ -74,4 +74,7 @@ return [
         'app_id' => 'YOUR-APP-ID-HERE',
         'rest_api_key' => 'YOUR-REST-API-KEY-HERE',
     ],
+    'cloud' => [
+        'server_address' => env('CLOUD_SERVER_ADDRESS', 'demo.worksuite.biz'),
+    ],
 ];
