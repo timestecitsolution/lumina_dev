@@ -136,6 +136,7 @@ use App\Http\Controllers\ContractorController;
 use App\Http\Controllers\SectionController;
 use App\Http\Controllers\StepController;
 use App\Http\Controllers\DeedController;
+use App\Http\Controllers\InvestmentFileController;
 
 Route::group(['middleware' => 'auth', 'prefix' => 'account'], function () {
     
