@@ -80,7 +80,7 @@ class ZKTecoController extends Controller
 
     public function handshake(Request $request)
     {
-
+Log::info('FULL REQUEST', $request->all());
         $sn = strtoupper($request->input('SN')) ?? ' ';
 
         if (!$sn) {
