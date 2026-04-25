@@ -58,7 +58,6 @@ class OvertimeRequestController extends AccountBaseController
             ->first();
 
         $this->overtimeRate = EmployeeDetails::where('user_id', auth()->id())->value('overtime_hourly_rate');
-        // dd($dataTable);
         return $dataTable->render('payroll::overtime-request.index', $this->data);
     }
 
@@ -95,8 +94,7 @@ class OvertimeRequestController extends AccountBaseController
             $overtimeRequestBase = $overtimeRequestBase->where('overtime_requests.user_id', $request->employee);
         }
 
-        if (!in_array('admin', user_roles()))
-        {
+        if (!in_array('admin', user_roles()) && !in_array('hr', user_roles())) {
             $overtimeRequestBase = $overtimeRequestBase->where(function ($query) use ($roleId) {
                 // Allow the user to see their own overtime requests
                 $query->where('overtime_requests.user_id', user()->id);

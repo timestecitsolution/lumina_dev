@@ -19,7 +19,8 @@
         <div class="form-body">
             <div class="row">
                 <div class="col-lg-8">
-                    @if (user()->hasRole('admin'))
+                    
+                    @if (user()->hasRole('admin') || user()->hasRole('hr'))
 
                     <x-forms.label fieldId="employee" :fieldLabel="__('app.employee')" :fieldRequired="true"
                     class="mt-3"> </x-forms.label>
@@ -106,7 +107,7 @@
         var i = 1;
         var selectedDates = [];
 
-        @if (!user()->hasRole('admin'))
+        @if (!user()->hasRole('admin') && !user()->hasRole('hr'))
             getPolicy({{ user()->id }})
         @endif
         $('#employee').change(function () {

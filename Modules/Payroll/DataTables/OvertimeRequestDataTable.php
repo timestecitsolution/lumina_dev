@@ -163,7 +163,7 @@ class OvertimeRequestDataTable extends BaseDataTable
         //         });
         //     });
         // }
-        if (!in_array('admin', user_roles()))
+        if (!in_array('admin', user_roles()) && !in_array('hr', user_roles()))
         {
             // ValidationPermission থেকে employee_id গুলো নিন
             // $allowedEmployeeIds = $this->validation_permissions->pluck('employee_id')->toArray();
